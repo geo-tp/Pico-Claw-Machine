@@ -49,22 +49,22 @@ while True:
     else:
         motorX_droite.off()
 
-    # Moteurs Y (haut/bas)
+    # Moteurs Y (avance/recule)
     if not btn_grue_haut.value() and not limitY_haut.value():
         motorY_gauche.on()
-        print("Grue monte")
+        print("Grue avance")
         led_state = True
     else:
         motorY_gauche.off()
 
     if not btn_grue_bas.value() and not limitY_bas.value():
         motorY_droite.on()
-        print("Grue descend")
+        print("Grue recule")
         led_state = True
     else:
         motorY_droite.off()
 
-    # Contrôle des moteurs Z (pince haut/bas)
+    # Moteurs Z (pince haut/bas)
     if not btn_pince_haut.value() and not limitZ_haut.value():
         motorZ_haut.on()
         print("Pince monte")
