@@ -30,12 +30,19 @@ Use Thonny IDE or another method to write the `main.py` file.
 ## Installation
 
 - Create a custom cable using 2x8 male dupont header to interface with the claw connector.
-- Connect the X and Y motors to DC Motor Controller 1 and provide a 12V power supply. X with D0, D1 and Y with D2, D3
-- Connect the Z motor and the claw to DC Motor Controller 2 and provide a 12V power supply. Z with D0, D1 and Claw (pince) with D2, D3
-- Connect both DC Motor Controllers to the Raspberry Pi Pico according to the pinout below, and use the 3.3V out from one of the motor controller to power the Pico.
+- Connect the X and Y motors to DC Motor Controller 1 and provide a 12V power supply.
+- Connect the Z motor and the claw to DC Motor Controller 2 and provide a 12V power supply. 
+- Connect both DC Motor Controllers to the Raspberry Pi Pico according to the pinout below
+- Use the 3.3V out from one of the motor controller to power the Pico Vsys pin.
 - Connect the necessary buttons and limits for operating the claw machine as shown in the pinout below.
 
+![Motor Controller1](motor_controller1.jpg)
+![Motor Controller2](motor_controller2.jpg)
+
+
 **Note:** We use X, Y, and Z axes as if viewing the claw machine from above. X refers to the motor that controls the internal movement of the claw assembly, Y is the movement along the guide rails, and Z is the axis used to raise and lower the claw.
+
+**Note:** First motor controller X with D0, D1 and Y with D2, D3. Second motor controller Z with D0, D1 and button claw (pince) with D2.
 
 ## Replacement Claw Pinout
 ![Claw Connector](claw_connector.png)
